@@ -2,6 +2,25 @@
 # display a menu with at least 3 difficulty choices and ask the user
 # to select the desired level
 difficulty = "1" # sample data, normally the user should choose the difficulty
+def choose_level():
+    level = input("\n==============\nChoose level: \n==============\n 1 for easy (hint: displays country and you will have 3 lives)\
+        \n 2 for medium (hint: guess country and you will have 5 lives)\
+        \n 3 for hard (hint: guess capital and you will have 7 lives)\n")
+    while not level.isdigit():
+        level = input("\n==============\nChoose level: \n==============\n 1 for easy (hint: displays country and you will have 3 lives)\
+        \n 2 for medium (hint: guess country and you will have 5 lives)\
+        \n 3 for hard (hint: guess capital and you will have 7 lives)\n")
+
+    while int(level) < 1 or int(level) > 3:
+            level = input("\n==============\nChoose level: \n==============\n 1 for easy (hint: displays country and you will have 3 lives)\
+        \n 2 for medium (hint: guess country and you will have 5 lives)\
+        \n 3 for hard (hint: guess capital and you will have 7 lives)\n")
+            while not level.isdigit():
+                level = input("\n==============\nChoose level: \n==============\n 1 for easy (hint: displays country and you will have 3 lives)\
+        \n 2 for medium (hint: guess country and you will have 5 lives)\
+        \n 3 for hard (hint: guess capital and you will have 7 lives)\n")
+    return level
+print(choose_level())
 
 
 # STEP 2
