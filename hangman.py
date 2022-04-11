@@ -34,6 +34,27 @@ def read_words_from_file():
     for i in range(len(l)):
         l[i] = l[i][:-1] # Delete \n from word pair
     return l
+
+
+def random_word():
+    word = read_words_from_file()
+    list_of_countries = [] 
+    list_of_cities = []
+    for line in word:
+        strip_line = line.strip().split(" | ", 1)
+        list_of_countries.append(strip_line[0])
+        list_of_cities.append(strip_line[1])
+    if level == 1:
+        choice = random.choice(list_of_cities)
+        print(choice)
+    elif level == 2:
+        choice = random.choice(list_of_countries)
+        print(choice)
+    else:
+        choice = random.choice(list_of_cities)
+        print(choice)
+
+random_word()
 word_to_guess = "Cairo" # sample data, normally the word should be chosen from the countries-and-capitals.txt
 lives = 5 # sample data, normally the lives should be chosen based on the difficulty
 
