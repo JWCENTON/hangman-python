@@ -22,7 +22,6 @@ def choose_level():
         \n 2 for medium (hint: guess country and you will have 5 lives)\
         \n 3 for hard (hint: guess capital and you will have 7 lives)\n")
     return level
-print(choose_level())
 
 
 # STEP 2
@@ -39,25 +38,25 @@ def read_words_from_file():
 
 
 def random_word():
-    word = read_words_from_file()
-    list_of_countries = [] 
-    list_of_cities = []
-    for line in word:
-        strip_line = line.strip().split(" | ", 1)
-        list_of_countries.append(strip_line[0])
-        list_of_cities.append(strip_line[1])
-    if level == 1:
-        choice = random.choice(list_of_cities)
-        print(choice)
-    elif level == 2:
-        choice = random.choice(list_of_countries)
-        print(choice)
-    else:
-        choice = random.choice(list_of_cities)
+    word = read_words_from_file() 
+    level = int(choose_level())
+ 
+    strip_line = [w.strip().split(" | ") for w in word] 
+ 
+    if level == 1: 
+        choice = random.choice(strip_line) 
+        print('Guess a capital of: ' + choice[0]) 
+        print('(delete) City: ' + choice[1]) 
+        choice = choice[1]
+    elif level == 2: 
+        choice = random.choice(strip_line)[0] 
+        print(choice) 
+    else: 
+        choice = random.choice(strip_line)[1] 
         print(choice)
 
-random_word()
-word_to_guess = "Cairo" # sample data, normally the word should be chosen from the countries-and-capitals.txt
+
+word_to_guess = random_word() # sample data, normally the word should be chosen from the countries-and-capitals.txt
 lives = 5 # sample data, normally the lives should be chosen based on the difficulty
 
 
