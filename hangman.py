@@ -1,3 +1,5 @@
+import random
+
 # PART 1
 # display a menu with at least 3 difficulty choices and ask the user
 # to select the desired level
