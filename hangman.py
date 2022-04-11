@@ -7,6 +7,14 @@ difficulty = "1" # sample data, normally the user should choose the difficulty
 # STEP 2
 # based on the chosen difficulty level, set the values 
 # for the player's lives
+def read_words_from_file():
+    """ Returns list with word pairs [country | capital]"""
+    l = []
+    with open('countries-and-capitals.txt') as file:
+        l = file.readlines()
+    for i in range(len(l)):
+        l[i] = l[i][:-1] # Delete \n from word pair
+    return l
 word_to_guess = "Cairo" # sample data, normally the word should be chosen from the countries-and-capitals.txt
 lives = 5 # sample data, normally the lives should be chosen based on the difficulty
 
