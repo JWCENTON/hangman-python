@@ -3,43 +3,90 @@ import sys
 from hangman_pic import HANGMANPICS
 from string import ascii_lowercase
 
+
+def choose_language():
+    print("Choose language: ")
+    languages = ["English", "Polski", "Українська"]
+    print(''.join('\t' + str(i+1) + '. ' + lang + '\n' for i,lang in enumerate(languages)))
+    inp = int(input())
+    match(inp):
+        case 3: # Ukrainian
+            return [
+                """
+==================
+Вибери складність:
+================== 
+    1 легка (підказка: показує місто і ти маєш 7 життів)
+    2 середня (підказка: відгадай країну і ти маєш 5 життів)
+    3 складна (підказка: відгадай місто і ти маєш 3 життя)
+""", "Міста і столиці", "Тварини", "Їжа","Вибери категорію: ", "Відгадай столицю: ",
+"Вибери одну літеру: \n","Дякую за гру!","Вже використані літери: ", "Вже спробувана літера. Спробуй іншу: \n",
+"Життя: ", "ПЕРЕМОГА!", "Не вдалося відгадати слово: ", "Поразка!",
+"Ти маєш: ", "життів.", "Хочеш зіграти знову? (Y - так): \n"]
+        case 2: # Polish
+            return [
+        """
+==============
+Wybierz poziom:
+==============
+    1 łatwy (wskazówka: pokazuje kraj i ty masz 7 żyć)
+    2 średni (wskazówka: zgadnij kraj i ty masz 5 żyć)
+    3 trudny (wskazówka: zgadnij stolicę i ty masz 3 życia)
+         """, "Kraje i stolice", "Zwierzęta", "Jedzenie",
+         "Wybierz kategorię: ", "Zgadnij stolicę: ",
+         "Wybierz jedną literę: \n", "Dzięki za granie!",
+         "Już próbowanę litery: ","Już próbowałeś tą literę. Spróbuj drugą: \n",
+         "Życia: ", 'WYGRAŁEŚ!', "Nie udało się odgadnąć słowo: ", "Przegrałeś!",
+         "Ty masz: ", "żyć.", "Chcesz zagrać ponownie? (Y - tak): \n"]
+        case _: # English
+            return [
+        """
+==============
+Choose level: 
+==============
+    1 for easy (hint: displays country and you will have 7 lives)
+    2 for medium (hint: guess country and you will have 5 lives)
+    3 for hard (hint: guess capital and you will have 3 lives)
+         """, "Coutries and capitals", "Animals", "Food",
+         "Choose category: ", "Guess a capital of: ",
+         "Choose one letter: \n", "Thank You for playing!",
+         "Already tried letters: ","You have already tried this letter. Choose another letter: \n",
+         "Lives: ",'You WIN!', "You did not guess the word: ", "You LOST!",
+         "You have: ","lives.","Do you want to continue (Y for yes): \n"]
+
 def choose_level1():
     """ Asking user to choose desired level: easy, medium, hard."""
-    ask_level_en = "\n==============\nChoose level: \n==============\n 1 for easy (hint: displays country and you will have 7 lives)\
-        \n 2 for medium (hint: guess country and you will have 5 lives)\
-        \n 3 for hard (hint: guess capital and you will have 3 lives)\n"
-    ask_level_pl = ""
-    level = input(ask_level_en)
+    ask_string = locale_text[0]
+    level = input(ask_string)
     while not level.isdigit():
-        level = input(ask_level_en)
+        level = input(ask_string)
 
     while int(level) < 1 or int(level) > 3:
-            level = input(ask_level_en)
+            level = input(ask_string)
             while not level.isdigit():
-                level = input(ask_level_en)
+                level = input(ask_string)
     return level
 
 def choose_level2():
     """ Asking user to choose desired level: easy, medium, hard."""
-    ask_level_en = "\n==============\nChoose level: \n==============\n 1 for easy (you will have 7 lives)\
-        \n 2 for medium (you will have 5 lives)\
-        \n 3 for hard (you will have 3 lives)\n"
+    ask_string = locale_text[0]
                       
-    level = input(ask_level_en)
+    level = input(ask_string)
     while not level.isdigit():
-        level = input(ask_level_en)
+        level = input(ask_string)
 
     while int(level) < 1 or int(level) > 3:
-            level = input(ask_level_en)
+            level = input(ask_string)
             while not level.isdigit():
-                level = input(ask_level_en)
+                level = input(ask_string)
     return level
 
 def get_file_name():
+    file_name = ""
     categories = {
-        1: "Coutries and capitals",
-        2: "Animals",
-        3: "Food"
+        1: locale_text[1],
+        2: locale_text[2],
+        3: locale_text[3]
     }
     categories_files = {
         1: "words\\countries-and-capitals.txt",
@@ -48,7 +95,7 @@ def get_file_name():
     }
     number = 0
     while True:
-        print('Choose category:')
+        print(locale_text[4])
         for i, cat in enumerate(categories.values()):
             print('\t',str(i+1) + '.',cat) 
         if not (number :=input("")).isdigit() or int(number) not in categories.keys():
@@ -99,7 +146,7 @@ def random_word1():
     if difficulty == 1: 
         choice = random.choice(strip_line) 
         lives = 7
-        print('Guess a capital of: ' + choice[0]) 
+        print(locale_text[5] + choice[0]) 
         # print('(delete) City: ' + choice[1]) - printing chosen citie by computer for testing
         choice = choice[1]
     elif difficulty == 2: 
@@ -135,11 +182,11 @@ def random_word2(file_name):
 
 def user_letter():
     """ Get user input with option to quit"""
-    user_char = input('Choose one letter: \n').lower()
+    user_char = input(locale_text[6]).lower()
     if user_char == 'quit':
-        sys.exit('Thank You for playing!')
+        sys.exit(locale_text[7])
     while len(user_char) != 1:
-        user_char = input('Choose one letter: \n').lower() 
+        user_char = input(locale_text[7]).lower() 
     return user_char
 
     
@@ -148,13 +195,13 @@ def already_tried_letter():
     global lives
     user_char = user_letter()
     while user_char in already_tried_letters:
-        print(f"Already tried letters: {' '.join(already_tried_letters)}")
-        user_char = input('You have already tried this letter. Choose another letter: \n').lower() 
+        print(f"{locale_text[8]}{' '.join(already_tried_letters)}")
+        user_char = input(locale_text[9]).lower() 
     if user_char not in word_to_guess.lower():
         lives -= 1
         print(HANGMANPICS[7-lives])
     already_tried_letters.append(user_char)
-    print(f"Already tried letters: {' '.join(already_tried_letters)}")
+    print(f"{locale_text[8]}{' '.join(already_tried_letters)}")
 
 
 def print_word():
@@ -180,13 +227,15 @@ def game():
             # print(word_to_guess) for testing only
             print_word()
             already_tried_letter()
-            print('Lives:', lives)
+            print(locale_text[10], lives)
             if check_win():
-                print('You WIN!')
+                print(locale_text[11])
                 break
         if lives == 0:
-            print(f'You did not guess the word: {word_to_guess}\nYou LOST!')    
+            print(f'{locale_text[12]}{word_to_guess}\n{locale_text[13]}')    
 
+
+locale_text = choose_language()
 
 if __name__ == '__main__':
     end_game = 'y'
@@ -198,17 +247,17 @@ if __name__ == '__main__':
             lives = guess[1]
             # display the chosen word to guess with all letters replaced by "_"
             # for example instead of "Cairo" display "_ _ _ _ _"
-            print(f'You have {lives} lives.')
+            print(f'{locale_text[14]}{lives} {locale_text[15]}')
             already_tried_letters = [' '] # this list will contain all the tried letters
             game()
-            end_game = input("Do you want to continue (Y for yes): \n").lower()
+            end_game = input(locale_text[16]).lower()
         else:
             guess = random_word2(file_name) # sample data, normally the word should be chosen from the countries-and-capitals.txt
             word_to_guess = guess[0]
             lives = guess[1]
             # display the chosen word to guess with all letters replaced by "_"
             # for example instead of "Cairo" display "_ _ _ _ _"
-            print(f'You have {lives} lives.')
+            print(f'{locale_text[14]}{lives} {locale_text[15]}')
             already_tried_letters = [' '] # this list will contain all the tried letters
             game()
-            end_game = input("Do you want to continue (Y for yes): \n").lower()
+            end_game = input(locale_text[16]).lower()
