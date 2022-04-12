@@ -86,18 +86,33 @@ def user_letter():
 # If it has already been typed, return to STEP 5. HINT: use a while loop here
 already_tried_letters = [] # this list will contain all the tried letters
 def already_tried_letter():
+    global lives
     user_char = user_letter()
     while user_char in already_tried_letters:
         user_char = input('You have already tried this letter. Choose another letter: \n').lower() 
+    if user_char not in word_to_guess.lower():
+        lives -= 1
     already_tried_letters.append(user_char)
-already_tried_letter()
 
 print(f"Already tried letters: {already_tried_letters}")
 # STEP 6
 # if the letter is present in the word iterate through all the letters in the variable
 # word_to_guess. If that letter is present in the already_tried_letters then display it,
 # otherwise display "_".
+def print_word():
+    for let in word_to_guess:
+        if let.lower() in already_tried_letters:
+            print(let, end='')
+        else:
+            print('-', end='')
+    print()
 
+# ------Test------
+# print(word_to_guess)
+# while True:
+#     print_word()
+#     already_tried_letter()
+#     print('Lives:', lives)
 
 # if the letter is not present in the word decrease the value in the lives variable
 # and display a hangman ASCII art. You can search the Internet for "hangman ASCII art",
