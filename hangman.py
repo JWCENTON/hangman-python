@@ -21,10 +21,10 @@ def choose_level1():
 
 def choose_level2():
     """ Asking user to choose desired level: easy, medium, hard."""
-    ask_level_en = """1. Easy
-2. Medium
-3. Hard
-                      """
+    ask_level_en = "\n==============\nChoose level: \n==============\n 1 for easy (you will have 7 lives)\
+        \n 2 for medium (you will have 5 lives)\
+        \n 3 for hard (you will have 3 lives)\n"
+                      
     level = input(ask_level_en)
     while not level.isdigit():
         level = input(ask_level_en)
@@ -48,7 +48,7 @@ def get_file_name():
     while True:
         print('Choose category:')
         for i, cat in enumerate(categoies.values()):
-            print('\t',i+1,cat) 
+            print('\t',str(i+1) + '.',cat) 
         file_name = int(input(""))
         break
     return categoies_files[file_name]
