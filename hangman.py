@@ -38,11 +38,13 @@ def choose_level2():
 def get_file_name():
     categories = {
         1: "Coutries and capitals",
-        2: "Animals"
+        2: "Animals",
+        3: "Food"
     }
     categories_files = {
         1: "words\\countries-and-capitals.txt",
-        2: "words\\animals.txt"
+        2: "words\\animals.txt",
+        3: "words\\food.txt"
     }
     number = 0
     while True:
