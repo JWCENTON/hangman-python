@@ -117,6 +117,87 @@ def print_word():
 # if the letter is not present in the word decrease the value in the lives variable
 # and display a hangman ASCII art. You can search the Internet for "hangman ASCII art",
 # or draw a new beautiful one on your own.
+HANGMANPICS = {
+0:"""
+  -----^
+       |
+       |
+       |
+       |
+       |
+-------o""",
+
+1:"""
+  -----^
+  |    |
+       |
+       |
+       |
+       |
+-------o""",
+
+2:"""
+  -----^
+  |    |
+  O    |
+       |
+       |
+       |
+-------o""",
+
+3:"""
+  -----^
+  |    |
+  O    |
+  |    |
+       |
+       |
+-------+""",
+
+4:"""
+  -----^
+  |    |
+  O    |
+ /|    |
+       |
+       |
+-------o """,
+
+5:"""
+  -----^
+  |    |
+  O    |
+ /|\   |
+       |
+       |
+-------+""",
+
+6:"""
+  -----^
+  |    |
+  O    |
+ /|\   |
+ /     |
+       |
+-------o""",
+
+7:"""
+  -----^
+  |    |
+ *_*   |
+ /|\   |
+ / \   |
+       |
+-------o"""}
+
+def ascii_art():
+    user_char = user_letter()
+    if user_char not in word_to_guess:
+        print(f"The word you're looking for doesn't contain : {user_char}")
+        lives -=1
+        print(HANGMANPICS[7-lives])
+        
+ascii_art()
 
 
 
