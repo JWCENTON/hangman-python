@@ -35,8 +35,8 @@ def choose_language():
 Wybierz poziom:
 ==============
     1 łatwy (podpowiedź: wyświetla kraj i będziesz miał 7 żyć)
-    2 średni (podpowiedź: wyświetla kraj i będziesz miał 5 żyć)
-    3 trudny (podpowiedź: wyświetla kraj i będziesz miał 3 życia)
+    2 średni (podpowiedź: odgadnij kraj i będziesz miał 5 żyć)
+    3 trudny (podpowiedź: odgadnij stolicę i będziesz miał 3 życia)
          """, "Kraje i stolice", "Zwierzęta", "Jedzenie",
          "Wybierz kategorię: ", "Zgadnij stolicę: ",
          "Wybierz jedną literę: \n", "Dziękujemy za grę!",
