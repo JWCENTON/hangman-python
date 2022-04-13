@@ -36,22 +36,25 @@ def choose_level2():
     return level
 
 def get_file_name():
-    file_name = ""
-    categoies = {
+    categories = {
         1: "Coutries and capitals",
         2: "Animals"
     }
-    categoies_files = {
+    categories_files = {
         1: "countries-and-capitals.txt",
         2: "animals.txt"
     }
+    number = 0
     while True:
         print('Choose category:')
-        for i, cat in enumerate(categoies.values()):
+        for i, cat in enumerate(categories.values()):
             print('\t',str(i+1) + '.',cat) 
-        file_name = int(input(""))
-        break
-    return categoies_files[file_name]
+        if not (number :=input("")).isdigit() or int(number) not in categories.keys():
+            continue
+        else:
+            number = int(number)
+            break
+    return categories_files[number]
     
 def read_words_from_file1():
     """ Returns list with word pairs [country | capital]"""
