@@ -137,7 +137,7 @@ def read_words_from_file1():
     l = []
     # file_name = get_file_name()
 
-    with open("words\\countries-and-capitals.txt") as file:
+    with open("words\\countries-and-capitals" + locale_index + '.txt', encoding='utf-8') as file:
         lines = file.readlines()
         for line in lines:
             line = line.strip()
@@ -153,7 +153,7 @@ def read_words_from_file2(file_name):
     l = []
     # file_name = get_file_name()
 
-    with open(file_name) as file:
+    with open(file_name, encoding='utf-8') as file:
         lines = file.readlines()
         for line in lines:
             line = line.strip()
