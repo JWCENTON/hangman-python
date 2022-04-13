@@ -5,12 +5,14 @@ from string import ascii_lowercase
 
 
 def choose_language():
+    global locale_index
     print("Choose language: ")
     languages = ["English", "Polski", "Українська"]
     print(''.join('\t' + str(i+1) + '. ' + lang + '\n' for i,lang in enumerate(languages)))
     inp = int(input())
     match(inp):
         case 3: # Ukrainian
+            locale_index = '_ua'
             return [
                 """
 ==================
@@ -32,6 +34,7 @@ def choose_language():
     3 складна (ти маєш 3 життя)
 """]
         case 2: # Polish
+            locale_index = '_pl'
             return [
         """
 ==============
@@ -113,9 +116,9 @@ def get_file_name():
         3: locale_text[3]
     }
     categories_files = {
-        1: "words\\countries-and-capitals.txt",
-        2: "words\\animals.txt",
-        3: "words\\food.txt"
+        1: "words\\countries-and-capitals",
+        2: "words\\animals",
+        3: "words\\food"
     }
     number = 0
     while True:
@@ -127,7 +130,7 @@ def get_file_name():
         else:
             number = int(number)
             break
-    return categories_files[number]
+    return str(categories_files[number] + locale_index + '.txt')
     
 def read_words_from_file1():
     """ Returns list with word pairs [country | capital]"""
@@ -259,6 +262,7 @@ def game():
             print(f'{locale_text[12]}{word_to_guess}\n{locale_text[13]}')    
 
 
+locale_index = ''
 locale_text = choose_language()
 
 if __name__ == '__main__':
