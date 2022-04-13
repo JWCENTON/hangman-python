@@ -29,15 +29,15 @@ def choose_language():
 ==============
 Wybierz poziom:
 ==============
-    1 łatwy (wskazówka: pokazuje kraj i ty masz 7 żyć)
-    2 średni (wskazówka: zgadnij kraj i ty masz 5 żyć)
-    3 trudny (wskazówka: zgadnij stolicę i ty masz 3 życia)
+    1 łatwy (podpowiedź: wyświetla kraj i będziesz miał 7 żyć)
+    2 średni (podpowiedź: wyświetla kraj i będziesz miał 5 żyć)
+    3 trudny (podpowiedź: wyświetla kraj i będziesz miał 3 życia)
          """, "Kraje i stolice", "Zwierzęta", "Jedzenie",
          "Wybierz kategorię: ", "Zgadnij stolicę: ",
-         "Wybierz jedną literę: \n", "Dzięki za granie!",
-         "Już próbowanę litery: ","Już próbowałeś tą literę. Spróbuj drugą: \n",
-         "Życia: ", 'WYGRAŁEŚ!', "Nie udało się odgadnąć słowo: ", "Przegrałeś!",
-         "Ty masz: ", "żyć.", "Chcesz zagrać ponownie? (Y - tak): \n"]
+         "Wybierz jedną literę: \n", "Dziękujemy za grę!",
+         "Już wypróbowanę litery: ","Już wypróbowałeś tą literę. Wybierz inną literę: \n",
+         "Życie: ", 'Wygrałeś!', "Nie odgadłeś słowa: ", "Przegrałeś!",
+         "Masz: ", "życia.", "Czy chczesz kontynuować (Y oznacza tak tak): \n"]
         case _: # English
             return [
         """
