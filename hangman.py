@@ -181,8 +181,8 @@ def game():
             print(f'{locale_text[12]}{word_to_guess}\n{locale_text[13]}')    
 
 
-locale_index = ''
-locale_text = choose_language()
+locale_index, locale_text = choose_language()
+
 
 if __name__ == '__main__':
     end_game = 'y'

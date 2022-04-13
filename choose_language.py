@@ -6,8 +6,8 @@ def choose_language():
     inp = int(input())
     match(inp):
         case 3: # Ukrainian
-            locale_index = '_ua'
-            return [
+            
+            return '_ua', [
                 """
 ==================
 Вибери складність:
@@ -28,8 +28,8 @@ def choose_language():
     3 складна (ти маєш 3 життя)
 """, "Можеш написати quit, щоб вийти"]
         case 2: # Polish
-            locale_index = '_pl'
-            return [
+            
+            return '_pl', [
         """
 ==============
 Wybierz poziom:
@@ -53,7 +53,7 @@ Wybierz poziom:
          """, "Możesz wpisać quit, żeby wyjść"
          ]
         case _: # English
-            return [
+            return '',[
         """
 ==============
 Choose level: 
