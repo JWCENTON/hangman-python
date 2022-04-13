@@ -22,7 +22,15 @@ def choose_language():
 """, "Міста і столиці", "Тварини", "Їжа","Вибери категорію: ", "Відгадай столицю: ",
 "Вибери одну літеру: \n","Дякую за гру!","Вже використані літери: ", "Вже спробувана літера. Спробуй іншу: \n",
 "Життя: ", "ПЕРЕМОГА!", "Не вдалося відгадати слово: ", "Поразка!",
-"Ти маєш: ", "життів.", "Хочеш зіграти знову? (Y - так): \n"]
+"Ти маєш: ", "життів.", "Хочеш зіграти знову? (Y - так): \n",
+"""
+==================
+Вибери складність:
+================== 
+    1 легка (ти маєш 7 життів)
+    2 середня (ти маєш 5 життів)
+    3 складна (ти маєш 3 життя)
+"""]
         case 2: # Polish
             return [
         """
@@ -37,7 +45,16 @@ Wybierz poziom:
          "Wybierz jedną literę: \n", "Dziękujemy za grę!",
          "Już wypróbowanę litery: ","Już wypróbowałeś tą literę. Wybierz inną literę: \n",
          "Życie: ", 'Wygrałeś!', "Nie odgadłeś słowa: ", "Przegrałeś!",
-         "Masz: ", "życia.", "Czy chczesz kontynuować (Y oznacza tak tak): \n"]
+         "Masz: ", "życia.", "Czy chczesz kontynuować (Y oznacza tak): \n",
+         """
+==============
+Wybierz poziom:
+==============
+    1 łatwy (będziesz miał 7 żyć)
+    2 średni (będziesz miał 5 żyć)
+    3 trudny (będziesz miał 3 życia)
+         """
+         ]
         case _: # English
             return [
         """
@@ -52,7 +69,15 @@ Choose level:
          "Choose one letter: \n", "Thank You for playing!",
          "Already tried letters: ","You have already tried this letter. Choose another letter: \n",
          "Lives: ",'You WIN!', "You did not guess the word: ", "You LOST!",
-         "You have: ","lives.","Do you want to continue (Y for yes): \n"]
+         "You have: ","lives.","Do you want to continue (Y for yes): \n",
+"""
+==============
+Choose level: 
+==============
+    1 for easy (you will have 7 lives)
+    2 for medium (you will have 5 lives)
+    3 for hard (you will have 3 lives)
+         """]
 
 def choose_level1():
     """ Asking user to choose desired level: easy, medium, hard."""
@@ -69,7 +94,7 @@ def choose_level1():
 
 def choose_level2():
     """ Asking user to choose desired level: easy, medium, hard."""
-    ask_string = locale_text[0]
+    ask_string = locale_text[17]
                       
     level = input(ask_string)
     while not level.isdigit():
