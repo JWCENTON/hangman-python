@@ -58,7 +58,7 @@ def read_words_from_file1():
     l = []
     # file_name = get_file_name()
 
-    with open("countries-and-capitals.txt") as file:
+    with open("words/countries-and-capitals.txt") as file:
         lines = file.readlines()
         for line in lines:
             line = line.strip()
@@ -187,7 +187,7 @@ if __name__ == '__main__':
     end_game = 'y'
     while end_game == 'y':
         file_name = get_file_name()
-        if  file_name == "countries-and-capitals.txt":
+        if  "countries-and-capitals" in file_name :
             guess = random_word1() # sample data, normally the word should be chosen from the countries-and-capitals.txt
             word_to_guess = guess[0]
             lives = guess[1]
