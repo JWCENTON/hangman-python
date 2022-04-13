@@ -41,8 +41,8 @@ def get_file_name():
         2: "Animals"
     }
     categories_files = {
-        1: "countries-and-capitals.txt",
-        2: "animals.txt"
+        1: "words\\countries-and-capitals.txt",
+        2: "words\\animals.txt"
     }
     number = 0
     while True:
@@ -61,7 +61,7 @@ def read_words_from_file1():
     l = []
     # file_name = get_file_name()
 
-    with open("words/countries-and-capitals.txt") as file:
+    with open("words\\countries-and-capitals.txt") as file:
         lines = file.readlines()
         for line in lines:
             line = line.strip()
