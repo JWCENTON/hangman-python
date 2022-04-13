@@ -26,7 +26,7 @@ def choose_language():
     1 легка (ти маєш 7 життів)
     2 середня (ти маєш 5 життів)
     3 складна (ти маєш 3 життя)
-"""]
+""", "Можеш написати quit, щоб вийти"]
         case 2: # Polish
             locale_index = '_pl'
             return [
@@ -50,7 +50,7 @@ Wybierz poziom:
     1 łatwy (będziesz miał 7 żyć)
     2 średni (będziesz miał 5 żyć)
     3 trudny (będziesz miał 3 życia)
-         """
+         """, "Możesz wpisać quit, żeby wyjść"
          ]
         case _: # English
             return [
@@ -74,4 +74,4 @@ Choose level:
     1 for easy (you will have 7 lives)
     2 for medium (you will have 5 lives)
     3 for hard (you will have 3 lives)
-         """]
+         """, "You can type quit to exit"]

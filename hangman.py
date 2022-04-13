@@ -109,7 +109,6 @@ def random_word1():
         # print(choice) - printing chosen citie by computer for testing
     return choice, lives
 
-
 def random_word2(file_name):
     """ Computer chooses random word from the countries-and-capitals file"""
     word = read_words_from_file2(file_name)
@@ -132,13 +131,13 @@ def random_word2(file_name):
 
 def user_letter():
     """ Get user input with option to quit"""
+    print(locale_text[18])
     user_char = input(locale_text[6]).lower()
     if user_char == 'quit':
         sys.exit(locale_text[7])
     while len(user_char) != 1:
         user_char = input(locale_text[6]).lower() 
     return user_char
-
     
 def already_tried_letter():
     """ Validate if the typed letter is already in the tried letters"""
@@ -153,7 +152,6 @@ def already_tried_letter():
     already_tried_letters.append(user_char)
     print(f"{locale_text[8]}{' '.join(already_tried_letters)}")
 
-
 def print_word():
     for let in word_to_guess:
         if let.lower() in already_tried_letters:
@@ -162,7 +160,6 @@ def print_word():
             print('-', end='')
     print()
 
-
 def check_win():    
     for char in word_to_guess:
         if char.lower() in already_tried_letters:
@@ -170,7 +167,6 @@ def check_win():
         else:
             return False
     return True
-
 
 def game():
         while lives > 0:
