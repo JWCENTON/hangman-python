@@ -1,0 +1,183 @@
+Afganistan | Przyjęcie
+Albania | Tirana
+Algieria | Algier
+Andora | Andora la vella
+Angola | Luanda
+Argentyna | Buenos aires
+Armenia | Erewan
+Australia | Canberra
+Austria | Wiedeń
+Azerbejdżan | Baku
+Bahamy | Nassau
+Bahrajn | Manama
+Bangladesz | Dhaka
+Barbados | Bridgetown
+Białoruś | Mińsk
+Belgia | Bruksela
+Belize | Belmopan
+Bhutan | Thimphu
+Boliwia | Pokój
+Bośnia i hercegowina | Sarajevo
+Botswana | Gaboron
+Brazylia | Brasilia
+Brunei | Seri begawan town
+Bułgaria | Sofia
+Burkina faso | Ouagadougou
+Burundi | Bujumina
+Wyspy zielonego przylądka | Plaża
+Kambodża | Phnom penh
+Kamerun | Jaunde
+Kanada | Ottawa
+Republika środkowoafrykańska | Bangui
+Chile | Santiago
+Chiny | Pekin
+Kolumbia | Bogota
+Comoros | Moroni
+Demokratyczna republika konga | Kinszasa
+Republika konga | Brazzaville
+Kostaryka | San jose
+Chorwacja | Zagrzeb
+Kuba | Hawana
+Cypr | Nikozja
+Republika czeska | Praga
+Dania | Kopenhaga
+Dominika | Roseau
+Republika dominikany | Santo domingo
+Ekwador | Quito
+Egipt | Kair
+Zbawiciel | San salvador
+Gwinea równikowa | Malabo
+Erytrea | Asmara
+Estonia | Tallinn
+Etiopia | Addis abeba
+Fidżi | Suva
+Finlandia | Helsinki
+Francja | Paryż
+Gabon | Libreville
+Gambia | Banjul
+Gruzja | Tbilisi
+Niemcy | Berlin
+Ghana | Accra
+Grecja | Ateny
+Gwatemala | Miasto gwatemala
+Gwinea | Konakri
+Gwinea-bissau | Bissau
+Gujana | Georgetown
+Honduras | Tegucigalpa
+Węgry | Budapeszt
+Islandia | Reykjavik
+Indie | Nowy delhi
+Indonezja | Djakarta
+Iran | Teheran
+Irak | Bagdad
+Irlandia | Dublin
+Izrael | Jerozolima
+Włochy | Rzym
+Jamajka | Kingston
+Japonia | Tokio
+Jordania | Amman
+Kazachstan | Astana
+Kenia | Nairobi
+Kiribati | Południowa tarawa
+Kosowo | Pristina
+Kuwejt | Kuwejt city
+Kirgistan | Biszkek
+Laos | Wientian
+Łotwa | Ryga
+Liban | Bejrut
+Lesotho | Maseru
+Liberia | Monrovia
+Libia | Trypolis
+Liechtenstein | Vaduz
+Litwa | Wilno
+Luksemburg | Luksemburg
+Macedonia | Skopje
+Madagaskar | Antananarywa
+Malawi | Lilongwe
+Malezja | Kuala lumpur
+Malediwy | Mężczyzna
+Mali | Bamako
+Malta | Valletta
+Wyspy marshalla | Majuro
+Mauretania | Nouakchott
+Mauritius | Port louis
+Meksyk | Meksyk
+Mikronezja | Palikir
+Moldova | Kisinau
+Monako | Monako
+Mongolia | Ulaanbaatar
+Czarnogóra | Podgorica
+Maroko | Rabat
+Mozambik | Maputo
+Namibia | Windhoek
+Nauru | Dystrykt yaren
+Nepal | Kathmandu
+Holandia | Amsterdam
+Nowa zelandia | Wellington
+Nikaragua | Managua
+Niger | Niamey
+Nigeria | Abudja
+Korea północna | Pyongyang
+Norwegia | Osło
+Oman | Muskat
+Pakistan | Islamabad
+Palau | Miażdżący
+Palestyna | Ramallah
+Panama | Miasto panama
+Papua nowa gwinea | Port moresby
+Paragwaj | Założenie
+Peru | Lima
+Filipiny | Manila
+Polska | Warszawa
+Portugalia | Lizbona
+Katar | Doha
+Rumunia | Bukareszt
+Rosja | Moskwa
+Rwanda | Kigali
+Saint kitts i nevis | Basseterre
+Święta lucia | Castries
+Saint vincent i grenadyny | Kingstown
+Samoa | Apia
+San marino | San marino
+Arabia saudyjska | Rijad
+Senegal | Dakar
+Serbia | Belgrad
+Seszele | Wiktoria
+Sierra leone | Freetown
+Singapur | Singapur
+Słowacja | Bratysława
+Słowenia | Lublana
+Wyspy salomona | Honiara
+Somali | Mogadiszu
+Afryka południowa | Pretoria
+Korea południowa | Seul
+Południowy sudan | Już
+Hiszpania | Madryt
+Sudan | Khartoum
+Suriname | Paramaribo
+Suaziland | Mbabane
+Szwecja | Sztokholm
+Szwajcaria | Berno
+Syria | Damaszek
+Tajwan | Tajpej
+Tadżykistan | Duszanbe
+Tanzania | Dodoma
+Tajlandia | Bangkok
+Iść | Lome
+Trynidad i tobago | Port w hiszpanii
+Tunezja | Tunis
+Indyk | Ankara
+Turkmenia | Aszchabad
+Tuvalu | Funafuti
+Uganda | Kampala
+Ukraina | Kijów
+Zjednoczone emiraty arabskie | Abu dabi
+Zjednoczone królestwo | Londyn
+Stany zjednoczone ameryki | Waszyngton
+Urugwaj | Montevideo
+Uzbekistan | Taszkent
+Vanuatu | Port vila
+Wenezuela | Carakas
+Wietnam | Hanoi
+Zambia | Lusaka
+Zimbabwe | Harare
