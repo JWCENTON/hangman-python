@@ -82,7 +82,6 @@ def choose_level2():
     return level
 
 def get_file_name():
-    file_name = ""
     categories = {
         1: locale_text[1],
         2: locale_text[2],
@@ -186,7 +185,7 @@ def user_letter():
     if user_char == 'quit':
         sys.exit(locale_text[7])
     while len(user_char) != 1:
-        user_char = input(locale_text[7]).lower() 
+        user_char = input(locale_text[6]).lower() 
     return user_char
 
     
@@ -196,7 +195,7 @@ def already_tried_letter():
     user_char = user_letter()
     while user_char in already_tried_letters:
         print(f"{locale_text[8]}{' '.join(already_tried_letters)}")
-        user_char = input(locale_text[9]).lower() 
+        user_char = input(locale_text[6]).lower() 
     if user_char not in word_to_guess.lower():
         lives -= 1
         print(HANGMANPICS[7-lives])
